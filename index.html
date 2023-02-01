@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css">
   <title>Frontend Bootcamp</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -41,7 +42,7 @@
     <div class="d-sm-flex align-items-center justify-content-between">
       <div><h1>Become a <span class="text-warning">Web Developer</span></h1>
             <p class="lead my-4">We focus on teaching our students the fundamentals of the latest and greatest technologies to prepare them for the first dev role.</p>
-        <button class="btn btn-primary btn-lg">Start the Enrollment</button>
+        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Start the Enrollment</button>
       </div>
 
       <img class="img-fluid w-50 d-none d-sm-block" src="img/hqdefault.jpg" alt="">
@@ -144,47 +145,223 @@
         Frequently Asked Questions
       </h2>
       <div class="accordion accordion-flush" id="questions">
+
+        
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
-        Accordion Item #1
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+        Down in Fraggle Rock!
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questions">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+    <div id="question-one" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit cupiditate voluptate consequatur praesentium? Dolore enim quia quidem in, aliquid ad! Et rerum voluptatibus, amet aut quisquam necessitatibus molestias, voluptatem quae incidunt quibusdam repudiandae dicta dolor? Perspiciatis saepe quas quisquam laborum! Totam dolores accusantium perspiciatis hic inventore ab architecto explicabo?</div>
     </div>
   </div>
         
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
-        Accordion Item #2
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+        Oi! Oi!
       </button>
     </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#questions">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    <div id="question-two" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#questions">
+      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit, nesciunt, aliquid fuga eum eius modi natus necessitatibus delectus optio omnis atque, dolor porro minus cupiditate sed laudantium soluta ad ex reiciendis exercitationem nam unde incidunt! Iusto possimus expedita doloribus maxime error, modi deserunt eaque eum, autem optio sit nostrum!</div>
     </div>
   </div>
         
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
-        Accordion Item #3
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+        Cast your cares away!
       </button>
     </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    <div id="question-three" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
+      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam laboriosam obcaecati alias sequi voluptatem officiis qui perspiciatis minus consectetur. At laboriosam dolores ab aliquam veritatis quod quam esse aliquid. Soluta, repellat velit quisquam fugit ipsam incidunt. Esse alias voluptates atque perspiciatis, natus, molestias est aliquid repudiandae similique velit quidem.</div>
+    </div>
+  </div>
+
+
+        <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four">
+        Worries for another day!
+      </button>
+    </h2>
+    <div id="question-four" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
+      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam laboriosam obcaecati alias sequi voluptatem officiis qui perspiciatis minus consectetur. At laboriosam dolores ab aliquam veritatis quod quam esse aliquid. Soluta, repellat velit quisquam fugit ipsam incidunt. Esse alias voluptates atque perspiciatis, natus, molestias est aliquid repudiandae similique velit quidem.</div>
+    </div>
+  </div>
+
+
+      <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-five">
+        Down in Fraggle Rock..
+      </button>
+    </h2>
+    <div id="question-five" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
+      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam laboriosam obcaecati alias sequi voluptatem officiis qui perspiciatis minus consectetur. At laboriosam dolores ab aliquam veritatis quod quam esse aliquid. Soluta, repellat velit quisquam fugit ipsam incidunt. Esse alias voluptates atque perspiciatis, natus, molestias est aliquid repudiandae similique velit quidem.</div>
+    </div>
+  </div>
+        
+</div>
+    
+    </div>
+  </section>
+
+  <!-- instructors -->
+  <section id="instructors" class="p-5 bg-primary">
+    <div class="container">
+      <h2 class="text-center text-white">Our Instructors</h2>
+      <p class="lead text-center text-white mb-5">Our instructors all have many years working as a web developer in the industry.</p>
+      <div class="row g-4">
+        <div class="col-mid-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/madamtrash.jpg" alt="" class="rounded-circle mb-3" style='width: 75%; height: 50%'>
+              <h3 class="card-title mb-3">Marjory the Trash Heap</h3>
+              <p class="card-text">An beneficent oracle that often provides wisdom and valuable insight.</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-mid-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/mokey.jpg" alt="" class="rounded-circle mb-3" style='width: 75%; height: 50%'>
+              <h3 class="card-title mb-3">Mokey Fraggle</h3>
+              <p class="card-text">A contemplative and creative aesthetician with writing skills in poetry.</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-mid-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/gobo.jpg" alt="" class="rounded-circle mb-3" style='width: 75%; height: 50%'>
+              <h3 class="card-title mb-3">Gobo Fraggle</h3>
+              <p class="card-text">A guitar playing pragmatist with a travelling uncle.</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-mid-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/wembley.jpg" alt="" class="rounded-circle mb-3" style='width: 75%; height: 50%'>
+              <h3 class="card-title mb-3">Wembley Fraggle</h3>
+              <p class="card-text">Pathalogically indecisive bongo drum player.</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!--contact and map-->
+  <section class="p-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md">
+          <h2 class="text-center mb-4">Contact Info</h2>
+          <ul class="list-group list-group-flush lead">
+            <li class="list-group-item">
+              <span class="fw-bold">Main Location:</span> 3rd Left Cave, Down In Fraggle Rock
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Enrollment Phone:</span> (555) 444 - 3333
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Student Phone:</span> (444) 222 - 1234
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Enrollment Email:</span> teacher.fraggle@fgl.rck
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Student Email:</span> student.fraggle@fgl.rck
+            </li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="p-5 bg-dark text-white text-center position-relative">
+    <div class="container">
+<p class="lead">Creative Commons and not Copyright</p>
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bit-arrow-up-circle h1"></i>
+      </a>
+    </div>
+    
+  </footer>
+  <!--modal-->
+  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enrollLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">Fill this form and we will get right back with you.</p>
+        <form>
+          <div class="mb-3">
+            <label for="first-name" class="col-form-label">
+              First Name:
+            </label>
+            <input type="text" class="form-control" id="first-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
-    </div>
-  </section>
   <!--mastercard--><!--you know, for everything else-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.6/emmet.cjs.js"></script>
 <script src="script.js"></script>
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- <!--
+  
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+
+  
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3RpZGVzNzciLCJhIjoiY2xkbDYxMjM5MjVhMDNubzNiN3NsazNucSJ9.lvAbunqiBWldI47W-tegJg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v12', 
+center: [54.657325, 2.43332], 
+zoom: 20 
+});
+  </script>
+  
+  <!--
   This script places a badge on your repl's full-browser view back to your repl's cover
   page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
   teal, blue, blurple, magenta, pink!
